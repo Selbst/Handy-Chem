@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter>
+	<ID>A</ID>
+	<Element>Aluminum</Element>
+	<Element>Argon</Element>
+	<Element>Silver</Element>
+	<Element>Gold</Element>
+	<Element>Astatine</Element>
+	<Element>Actinium</Element>
+	<Element>Americium</Element>
+</letter>
+<letter>
+	<ID>B</ID>
+	<Element>Beryllium</Element>
+	<Element>Boron</Element>
+	<Element>Bromine</Element>
+	<Element>Barium</Element>
+	<Element>Bismuth</Element>
+	<Element>Bohrium</Element>
+	<Element>Berkelium</Element>
+</letter>
+<letter>
+	<ID>C</ID>
+	<Element>Carbon</Element>
+	<Element>Chlorine</Element>
+	<Element>Calcium</Element>
+	<Element>Chromium</Element>
+	<Element>Cobalt</Element>
+	<Element>Copper</Element>
+	<Element>Cadmium</Element>
+	<Element>Caesium</Element>
+	<Element>Copernicium</Element>
+	<Element>Cerium</Element>
+	<Element>Curium</Element>
+	<Element>Californium</Element>
+</letter>
+<letter>
+	<ID>D</ID>
+	<Element>Dubnium</Element>
+	<Element>Darmstadtium</Element>
+	<Element>Dysprosium</Element>
+</letter>
+<letter>
+	<ID>E</ID>
+	<Element>Europium</Element>
+	<Element>Erbium</Element>
+	<Element>Einsteinium</Element>
+</letter>
+<letter>
+	<ID>F</ID>
+	<Element>Fluorine</Element>
+	<Element>Iron</Element>
+	<Element>Francium</Element>
+	<Element>Fermium</Element>
+</letter>
+<letter>
+	<ID>G</ID>
+	<Element>Gallium</Element>
+	<Element>Germanium</Element>
+	<Element>Gadolinium</Element>
+</letter>
+<letter>
+	<ID>H</ID>
+	<Element>Hydrogen</Element>
+	<Element>Helium</Element>
+	<Element>Hafnium</Element>
+	<Element>Mercury</Element>
+	<Element>Hassium</Element>
+	<Element>Holmium</Element>
+</letter>
+<letter>
+	<ID>I</ID>
+	<Element>Indium</Element>
+	<Element>Iodine</Element>
+	<Element>Iridium</Element>
+</letter>
+<letter>
+	<ID>K</ID>
+	<Element>Potassium</Element>
+	<Element>Krypton</Element>
+</letter>
+<letter>
+	<ID>L</ID>
+	<Element>Lithium</Element>
+	<Element>Lanthanium</Element>
+	<Element>Lutetium</Element>
+	<Element>Lawrencium</Element>
+</letter>
+<letter>
+	<ID>M</ID>
+	<Element>Magnesium</Element>
+	<Element>Manganese</Element>
+	<Element>Molybdenum</Element>
+	<Element>Meitnerium</Element>
+	<Element>Mendelevium</Element>
+</letter>
+<letter>
+	<ID>N</ID>
+	<Element>Nitrogen</Element>
+	<Element>Neon</Element>
+	<Element>Sodium</Element>
+	<Element>Nickel</Element>
+	<Element>Niobium</Element>
+	<Element>Neodmium</Element>
+	<Element>Neptunium</Element>
+	<Element>Nobelium</Element>
+</letter>
+<letter>
+	<ID>O</ID>
+	<Element>Oxygen</Element>
+	<Element>Osmium</Element>
+</letter>
+<letter>
+	<ID>P</ID>
+	<Element>Phosphorus</Element>
+	<Element>Palladium</Element>
+	<Element>Platinum</Element>
+	<Element>Lead</Element>
+	<Element>Polonium</Element>
+	<Element>Praseodymium</Element>
+	<Element>Promethium</Element>
+	<Element>Protactinium</Element>
+	<Element>Plutonium</Element>
+</letter>
+<letter>
+	<ID>R</ID>
+	<Element>Rubidium</Element>
+	<Element>Ruthenium</Element>
+	<Element>Rhodium</Element>
+	<Element>Rhenium</Element>
+	<Element>Radon</Element>
+	<Element>Radium</Element>
+	<Element>Rutherfordium</Element>
+	<Element>Roentgenium</Element>
+</letter>
+<letter>
+	<ID>S</ID>
+	<Element>Silicon</Element>
+	<Element>Sulfur</Element>
+	<Element>Scandium</Element>
+	<Element>Selenium</Element>
+	<Element>Strontium</Element>
+	<Element>Tin</Element>
+	<Element>Antimony</Element>
+	<Element>Seaborgium</Element>
+	<Element>Samarium</Element>
+</letter>
+<letter>
+	<ID>T</ID>
+	<Element>Titanium</Element>
+	<Element>Technetium</Element>
+	<Element>Tellurium</Element>
+	<Element>Tantalum</Element>
+	<Element>Thailium</Element>
+	<Element>Terbium</Element>
+	<Element>Thulium</Element>
+	<Element>Thorium</Element>
+</letter>
+<letter>
+	<ID>U</ID>
+	<Element>Ununtrium</Element>
+	<Element>Ununquadium</Element>
+	<Element>Ununpentium</Element>
+	<Element>Ununhexium</Element>
+	<Element>Ununseptium</Element>
+	<Element>Ununoctium</Element>
+	<Element>Uranium</Element>
+</letter>
+<letter>
+	<ID>V</ID>
+	<Element>Vanadium</Element>
+</letter>
+<letter>
+	<ID>W</ID>
+	<Element>Tungsten</Element>
+</letter>
+<letter>
+	<ID>X</ID>
+	<Element>Xenon</Element>
+</letter>
+<letter>
+	<ID>Y</ID>
+	<Element>Yttrium</Element>
+	<Element>Ytterbium</Element>
+</letter>
+<letter>
+	<ID>Z</ID>
+	<Element>Zinc</Element>
+	<Element>Zirconium</Element>
+</letter>

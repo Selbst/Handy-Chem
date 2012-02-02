@@ -1,0 +1,6 @@
+0_ set
+	3x3 grid input features
+	trained on sparse characters
+1_ set
+	2x2 grid input features
+	trained on sparse characters
