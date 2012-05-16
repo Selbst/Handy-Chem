@@ -1,0 +1,15 @@
+all.ts
+	sparse testing set
+	10 examples each
+all_3.ts
+	filled in testing set
+	10 examples each
+all_4.ts
+	filled in testing set 2
+	10 examples each	
+all_5.ts
+	all_3 + all_4
+	20 examples each.
+
+all_6.ts
+	30 examples each.

@@ -1,0 +1,155 @@
+package auto_grader;
+
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.font.TextAttribute;
+import java.text.AttributedString;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import chemistry.Molecule;
+import dictionary.Lookup_Char;
+
+public class Print_Area extends JPanel {
+	private Molecule molecule;
+	private int panel_height;
+	private int panel_width;
+	private int molecule_height;
+	private int molecule_width;
+	private int font_size;
+	
+	public LinkedList<String> atoms_to_draw;
+	public boolean drawing;
+	public LinkedList<Integer> atoms_x;
+	public LinkedList<Integer> atoms_y;
+	public LinkedList<int[]> bonds;
+	public LinkedList<Integer[]> electrons_to_draw;
+	private boolean erase_all;
+	
+	
+	
+	public Print_Area() {
+		setBackground(new Color(240, 230, 230));
+        this.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        drawing = false;
+	}
+	public void initialize_drawing() {
+		atoms_to_draw = new LinkedList<String>();
+		atoms_x = new LinkedList<Integer>();
+		atoms_y = new LinkedList<Integer>();
+		bonds = new LinkedList<int[]>();
+	}
+	public void clear_molecule() {
+		if (atoms_to_draw != null) {
+			atoms_to_draw.clear();
+		}
+		if (atoms_x != null) {
+			atoms_x.clear();
+		}
+		if (atoms_y != null) {atoms_y.clear();
+		
+		}
+		if (bonds != null) {
+			bonds.clear();
+		}
+		
+		erase_all = true;
+		paintComponent(getGraphics());
+		erase_all = false;
+	}
+	public void print_molecule(Molecule molecule) {
+		this.molecule = molecule;
+  		
+        panel_height = this.getHeight();
+        panel_width = this.getWidth();
+        
+  		molecule_height = molecule.get_height();
+  		molecule_width = molecule.get_width();
+  		drawing = false;
+		paintComponent(getGraphics());
+	}
+	
+	  public void paintComponent(Graphics g) {
+		  super.paintComponent(g);
+		  	if (erase_all) {
+			    Graphics2D g2d = (Graphics2D) g;
+			    g2d.setColor(new Color(240, 230, 230));
+			    g2d.fillRect(0, 0, panel_width-1, panel_height-1);
+		  	}
+		  	if (drawing) {
+			    Graphics2D g2d = (Graphics2D) g;
+			    Font font = new Font("Serif", Font.PLAIN, font_size);
+
+			    g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+			    
+			    AttributedString as1;
+			    System.out.println("to draw: " + atoms_to_draw.size());
+			    Iterator<String> to_draw_iter = atoms_to_draw.iterator();
+			    Iterator<Integer> atoms_x_iter = atoms_x.iterator();
+			    Iterator<Integer> atoms_y_iter = atoms_y.iterator();
+			    
+			    while (to_draw_iter.hasNext()) {
+			    	//as1 = new AttributedString(to_draw_iter.next() + "A");
+			    	as1 = new AttributedString("█" + Lookup_Char.lookup(Integer.parseInt(to_draw_iter.next()), false));
+			    	
+
+				    as1.addAttribute(TextAttribute.FONT, font);
+			    	g2d.drawString(as1.getIterator(), atoms_x_iter.next(), atoms_y_iter.next());
+			    }
+			    int stroke_width = font_size/20;
+			    if (stroke_width < 2) {
+			    	stroke_width = 1;
+			    }
+			    g2d.setStroke(new BasicStroke(stroke_width));
+			    Iterator<int[]> bonds_iterator = bonds.iterator();
+			    int[] coords;
+			    while (bonds_iterator.hasNext()) {
+			    	coords = bonds_iterator.next();
+			    	g2d.drawLine(coords[0], coords[1], coords[2], coords[3]);
+			    }			    
+		  	}
+		  	else if (molecule != null) {
+
+		  		
+		  		int atom_height = panel_height / molecule_height;
+		  		int atom_width = panel_width / molecule_width;
+		  		
+		  		
+		  		int atom_min_dim = atom_height;
+		  		if (atom_height > atom_width) {
+		  			atom_min_dim = atom_width;
+		  		}
+		  		font_size = atom_min_dim / 2;
+		  		int bond_length = (int)(atom_min_dim/3.5);
+		  		int atom_length = atom_min_dim;
+		  		
+		  		
+		  		
+		  		
+
+			    Graphics2D g2d = (Graphics2D) g;
+
+			    Font font = new Font("Serif", Font.PLAIN, font_size);
+		  		drawing = true;
+			    molecule.print(font, bond_length, atom_length, g2d, this);
+			    
+		  	}
+		    
+		    
+		    
+		  }
+		  
+		  public int get_height() {
+			  return panel_height;
+		  }
+		  public int get_width() {
+			  return panel_width;
+		  }
+}
